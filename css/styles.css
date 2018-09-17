@@ -158,24 +158,25 @@ nav h1 a {
   padding: 0 30px 25px;
   text-align: left;
   min-width: 270px;
+  max-width: 300px;
 }
 
 /* ==== Subset of Media Queries for Restaurant-list ==== */
-@media screen and (min-width: px) {
+@media screen and (min-width: 0px) {
   #restaurants-list li {
-    ;
+    max-width: 80%;
    }
 }
 
-@media screen and (min-width: px) {
+@media screen and (min-width: 650px) {
   #restaurants-list li {
-    ;
+    max-width: 55%;
    }
 }
 
-@media screen and (min-width: px) {
+@media screen and (min-width: 818px) {
   #restaurants-list li {
-    ;
+    max-width: 270px;
    }
 }
 
