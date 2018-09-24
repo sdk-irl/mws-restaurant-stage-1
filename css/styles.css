@@ -161,7 +161,7 @@ nav h1 a {
   max-width: 300px;
 }
 
-/* ==== Subset of Media Queries for Restaurant-list ==== */
+/* === Subset of Media Queries for Restaurant-list === */
 @media screen and (min-width: 0px) {
   #restaurants-list li {
     max-width: 80%;
