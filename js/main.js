@@ -120,7 +120,6 @@ updateRestaurants = () => {
     } else {
       resetRestaurants(restaurants);
       fillRestaurantsHTML();
-      aria-expanded="true";
     }
   })
 }
