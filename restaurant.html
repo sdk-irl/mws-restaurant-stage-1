@@ -32,17 +32,20 @@
   <!-- Beginning main -->
   <main id="maincontent" class="main-container">
     <!-- Beginning map -->
-    <section id="map-container">
+    <!--Credit: help understanding ARIA role placement from Doug Brown's project walkthrough webinar-->
+    <section id="map-container" aria-label="Mapbox map application" role="application"></section>
       <div id="map"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
-    <section id="restaurant-container">
-      <h1 id="restaurant-name"></h1>
+    <section id="restaurant-information">
+      <h2 id="restaurant-name"></h2>
       <img id="restaurant-img">
       <p id="restaurant-cuisine"></p>
-      <p id="restaurant-address"></p>
-      <table id="restaurant-hours"></table>
+      <p id="restaurant-address"></p>     
+      <div class="restaurant-hours">
+        <table id="restaurant-hours" aria-label="Restaurant hours"></table>
+      </div>
     </section>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
