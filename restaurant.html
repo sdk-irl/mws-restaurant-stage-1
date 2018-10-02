@@ -21,8 +21,8 @@
     </nav>
     <!-- Beginning breadcrumb -->
     <ul id="breadcrumb" >
-      <button><a href="/">Home</a></button>
-      <!-- TODO added thi button, or swapped out from a, but now missing slash and need to fix formatting-->
+      <button class="button" onclick="window.location.href='/'">Home</button>
+      <span>|</span>
     </ul>
     <!-- End breadcrumb -->
     <!-- End nav -->
@@ -32,7 +32,7 @@
   <!-- Beginning main -->
   <main id="maincontent" class="main-container">
     <!-- Beginning map -->
-    <!--Credit: help understanding ARIA role placement from Doug Brown's project walkthrough webinar-->
+    <!--Credit: help understanding ARIA role placement from Doug Brown's project walkthrough webinar https://www.youtube.com/watch?v=92dtrNU1GQc-->
     <section id="map-container" aria-label="Mapbox map application" role="application"></section>
       <div id="map"></div>
     </section>

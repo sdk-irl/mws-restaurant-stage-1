@@ -205,6 +205,20 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 
 } 
+/* Credit: Help understanding SW from Doug Brown's project walkthrough webinar https://www.youtube.com/watch?v=92dtrNU1GQc, 
+Matt Cranford's project walkthrough: https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/, 
+and Uday Hiwarale's SW article: https://itnext.io/service-workers-your-first-step-towards-progressive-web-apps-pwa-e4e11d1a2e85 */
+    
+/*Setting up service worker*/
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+      .then(registration => {
+          console.log('Service worker registered! Scope is:', registration.scope);
+      })
+      .catch(error => {
+          console.log('Service worker registration failed, error:', error);
+      })
+}
 /* addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
