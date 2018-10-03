@@ -1,20 +1,7 @@
-self.addEventListener('install', event => {
-    console.log('Service worker installing...');
-    event.waitUntil(
-        caches.open('v1').then(cache => {
-           return cache.addAll(filesToCache);
-        })
-    );
-});
-
-//self.addEventListener('activate', event => {
-//    console.log('Service worker activating...');
-//});
-
 const filesToCache = [
     '/',
-    '/.index.html',
-    '/.restaurant.html',
+    '/index.html',
+    '/restaurant.html',
     '/css/styles.css',
     '/data/restaurants.json',
     '/img/1.jpg',
@@ -31,3 +18,25 @@ const filesToCache = [
     '/js/main.js',
     '/js/restaurant_info.js'
 ]
+
+self.addEventListener('install', function(event) {
+    console.log('Service worker installing...');
+    event.waitUntil(
+        caches.open('cache-1').then(cache => {
+           return cache.addAll(filesToCache);
+        })
+    );
+});
+
+self.addEventListener('fetch', function(event) {
+    event.respondWith(
+        caches.match(event.request)
+        .then(response => {
+            if (response) {
+                console.log(event.request, ' is in cache.');
+                return response;
+            }
+        })
+    );
+});
+

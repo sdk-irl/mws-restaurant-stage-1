@@ -211,7 +211,7 @@ and Uday Hiwarale's SW article: https://itnext.io/service-workers-your-first-ste
     
 /*Setting up service worker*/
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js')
+  navigator.serviceWorker.register('../sw.js')
       .then(registration => {
           console.log('Service worker registered! Scope is:', registration.scope);
       })
