@@ -32,11 +32,7 @@ self.addEventListener('fetch', function(event) {
     event.respondWith(
         caches.match(event.request)
         .then(response => {
-            if (response) {
-                console.log(event.request, ' is in cache.');
-                return response;
-            }
+                return response || fetch(event.request);
         })
     );
 });
-
