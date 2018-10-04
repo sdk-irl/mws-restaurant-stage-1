@@ -179,10 +179,6 @@ nav h1 a {
   max-width: 300px;
 }
 
-#restaurants-list .restaurant-description {
-  /* add formatting here */
-}
-
 /* === Subset of Media Queries for Restaurant-list === */
 @media screen and (max-width: 350px) {
   #restaurants-list li {
